@@ -15,7 +15,7 @@
         const fallback = "{{FALLBACK}}";
 
         if (/Android/i.test(navigator.userAgent)) {
-          // Thử mở bằng Intent URL
+          // Open with Intent URL
           const intentUrl = `intent://${appPath}#Intent;` +
             `scheme=${appName};` +
             `package=${appPackage};` +
@@ -24,20 +24,20 @@
 
           window.location.href = intentUrl;
         } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-          // Thử mở app trên iOS
+          // Open app iOS
           window.location.href = `${appName}://${appPath}`;
         } else {
-          // Chuyển đến fallback URL cho các thiết bị khác
+          // fallback URL for other devices
           window.location.href = fallback;
         }
 
-        // Fallback sau 2.5 giây nếu không mở được app
+        // Fallback after 2.5 seconds if the app doesn't open
         setTimeout(function() {
           window.location.href = fallback;
         }, 2500);
       }
 
-      // Thực hiện redirect ngay khi trang load
+      // Redirect immediately when the page loads
       redirect();
     </script>
 

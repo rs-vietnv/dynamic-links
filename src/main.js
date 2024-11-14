@@ -20,7 +20,7 @@ export default async ({ req, res, log }) => {
     throw new Error('CONFIG environment variable must be set')
   }
   
-  // Tìm config phù hợp với path cơ bản (không bao gồm query params)
+  // Find the config matching the basic path (without query params)
   const basePath = req.path.split('?')[0]
   const routeConfig = config.find(({ path }) => path === basePath)
   
@@ -29,16 +29,16 @@ export default async ({ req, res, log }) => {
     return res.empty()
   }
 
-  // Lấy query parameters từ request
+  // Get query parameters from request
   const { screen, login_id, company_id } = req.query
   
-  // Clone targets để không ảnh hưởng đến config gốc
+  // Clone targets to avoid affecting the original config
   const targets = JSON.parse(JSON.stringify(routeConfig.targets))
   
-  // Cập nhật appPath với query parameters động
+  // Update appPath with dynamic query parameters
   const queryString = `screen=${screen}&login_id=${login_id}&company_id=${company_id}`
   
-  // Cập nhật appPath cho từng platform
+  // Update appPath for each platform
   Object.keys(targets).forEach(platform => {
     if (targets[platform] && typeof targets[platform] === 'object') {
       targets[platform].appPath = `deeplink?${queryString}`
