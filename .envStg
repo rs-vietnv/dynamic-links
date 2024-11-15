@@ -1,0 +1,291 @@
+CONFIG='[
+  {
+    "path": "/dynamic/resident",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.resident.stg",
+        "appPackage": "com.chintaidx.kanri.resident.stg",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=com.chintaidx.kanri.resident"
+      },
+      "ios": {
+        "appName": "chintaidx.resident.stg",
+        "appPath": "deeplink",
+        "appPackage": "com.chintaidx.kanri.resident.stg",
+        "fallback": "https://apps.apple.com/vn/app/id1548615608"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/download/resident"
+    }
+  },
+  {
+    "path": "/dynamic/resident-Fudeal",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.resident.specialize.Fudeal.stg",
+        "appPackage": "jp.FudealCreation.resident.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.FudealCreation.resident"
+      },
+      "ios": {
+        "appName": "chintaidx.resident.specialize.Fudeal.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.FudealCreation.resident.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6504351754"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/download/resident?c=Fudeal"
+    }
+  },
+  {
+    "path": "/dynamic/resident-issei",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.resident.specialize.issei.stg",
+        "appPackage": "jp.ISSEISYOJI.resident.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.ISSEISYOJI.resident"
+      },
+      "ios": {
+        "appName": "chintaidx.resident.specialize.issei.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.ISSEISYOJI.resident.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6504351754"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/download/resident?c=issei"
+    }
+  },
+  {
+    "path": "/dynamic/resident-panasonicHomes",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.resident.specialize.panasonicHomes.stg",
+        "appPackage": "jp.PanasonicHomesRealEstate.resident.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.PanasonicHomesRealEstate.resident"
+      },
+      "ios": {
+        "appName": "chintaidx.resident.specialize.panasonicHomes.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.PanasonicHomesRealEstate.resident.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6479597723"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/download/resident?c=panasonicHomes"
+    }
+  },
+  {
+    "path": "/dynamic/resident-vertex",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.resident.specialize.vertex.stg",
+        "appPackage": "jp.vertex.resident.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.vertex.resident"
+      },
+      "ios": {
+        "appName": "chintaidx.resident.specialize.vertex.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.vertex.resident.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6443536836"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/download/resident?c=vertex"
+    }
+  },
+  {
+    "path": "/dynamic/resident-stride",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.resident.specialize.stride.stg",
+        "appPackage": "jp.stride.resident.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.stride.resident"
+      },
+      "ios": {
+        "appName": "chintaidx.resident.specialize.stride.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.stride.resident.staging",
+        "fallback": "https://apps.apple.com/vn/app/id1625628107"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/download/resident?c=stride"
+    }
+  },
+
+  {
+    "path": "/dynamic/owner",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.owner.stg",
+        "appPackage": "com.chintaidx.kanri.owner.stg",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=com.chintaidx.kanri.owner"
+      },
+      "ios": {
+        "appName": "chintaidx.owner.stg",
+        "appPath": "deeplink",
+        "appPackage": "com.chintaidx.kanri.owner.stg",
+        "fallback": "https://apps.apple.com/vn/app/id1531075216"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/owner-web#/auth/login"
+    }
+  },
+  {
+    "path": "/dynamic/owner-Fudeal",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.owner.specialize.Fudeal.stg",
+        "appPackage": "jp.FudealCreation.owner.stg",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.FudealCreation.owner"
+      },
+      "ios": {
+        "appName": "chintaidx.owner.specialize.fudeal.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.FudealCreation.owner.stg",
+        "fallback": "https://apps.apple.com/vn/app/id6504350605"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/owner-web#/auth/login?c=Fudeal"
+    }
+  },
+  {
+    "path": "/dynamic/owner-panasonicHomes",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.owner.specialize.panasonicHomes.stg",
+        "appPackage": "jp.PanasonicHomesRealEstate.owner.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.PanasonicHomesRealEstate.owner"
+      },
+      "ios": {
+        "appName": "chintaidx.owner.specialize.panasonicHomes.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.PanasonicHomesRealEstate.owner.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6479597723"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/owner-web#/auth/login?c=panasonicHomes"
+    }
+  },
+  {
+    "path": "/dynamic/owner-HomeMisawa",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.owner.specialize.HomeMisawa.stg",
+        "appPackage": "jp.HOME.MISAWA.owner.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.HOME.MISAWA.owner"
+      },
+      "ios": {
+        "appName": "chintaidx.owner.specialize.HomeMisawa.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.HOME.MISAWA.owner.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6449073512"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/owner-web#/auth/login?c=HomeMisawa"
+    }
+  },
+  {
+    "path": "/dynamic/owner-issei",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.owner.specialize.issei.stg",
+        "appPackage": "jp.ISSEISYOJI.owner.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.ISSEISYOJI.owner"
+      },
+      "ios": {
+        "appName": "chintaidx.owner.specialize.issei.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.ISSEISYOJI.owner.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6737178117"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/owner-web#/auth/login?c=issei"
+    }
+  },
+  {
+    "path": "/dynamic/owner-LebenTrust",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.owner.specialize.LebenTrust.stg",
+        "appPackage": "jp.LebenTrust.owner.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.LebenTrust.owner"
+      },
+      "ios": {
+        "appName": "chintaidx.owner.specialize.LebenTrust.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.LebenTrust.owner.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6467580575"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/owner-web#/auth/login?c=LebenTrust"
+    }
+  },
+  {
+    "path": "/dynamic/owner-nissho",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.owner.specialize.nissho.stg",
+        "appPackage": "jp.Nissho.owner.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.Nissho.owner"
+      },
+      "ios": {
+        "appName": "chintaidx.owner.specialize.nissho.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.Nissho.owner.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6451010229"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/owner-web#/auth/login?c=nissho"
+    }
+  },
+  {
+    "path": "/dynamic/owner-Ontec",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.owner.specialize.Ontec.stg",
+        "appPackage": "jp.Ontec.owner.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.Ontec.owner"
+      },
+      "ios": {
+        "appName": "chintaidx.owner.specialize.Ontec.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.Ontec.owner.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6648769921"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/owner-web#/auth/login?c=Ontec"
+    }
+  },
+  {
+    "path": "/dynamic/owner-TaiseiHousy",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.owner.specialize.TaiseiHousy.stg",
+        "appPackage": "jp.TaiseiHousy.owner.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.TaiseiHousy.owner"
+      },
+      "ios": {
+        "appName": "chintaidx.owner.specialize.TaiseiHousy.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.TaiseiHousy.owner.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6446919027"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/owner-web#/auth/login?c=TaiseiHousy"
+    }
+  },
+  {
+    "path": "/dynamic/owner-vertex",
+    "targets": {
+      "android": {
+        "appName": "chintaidx.owner.specialize.vertex.stg",
+        "appPackage": "jp.vertex.owner.staging",
+        "appPath": "deeplink",
+        "fallback": "https://play.google.com/store/apps/details?id=jp.vertex.owner"
+      },
+      "ios": {
+        "appName": "chintaidx.owner.specialize.vertex.stg",
+        "appPath": "deeplink",
+        "appPackage": "jp.vertex.owner.staging",
+        "fallback": "https://apps.apple.com/vn/app/id6443539155"
+      },
+      "default": "https://owner-stg.admin.chintaidx.com/owner-web#/auth/login?c=vertex"
+    }
+  }
+]'

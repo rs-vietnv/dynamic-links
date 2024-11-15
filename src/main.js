@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import detectPlatforms from './detectors'
+import detectPlatforms from './detectors.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -9,18 +9,41 @@ const __dirname = path.dirname(__filename)
 const staticFolder = path.join(__dirname, '../static')
 
 export default async ({ req, res, log }) => {
+  req.path = req.path.replace(/\/$/, '')
+  
+  log(`Incoming request path: ${req.path}`)
+  log(`Query params: ${JSON.stringify(req.query)}`)
+  
   const config = JSON.parse(process.env.CONFIG ?? '[]')
-
+  
   if (config.length === 0) {
     throw new Error('CONFIG environment variable must be set')
   }
-
-  const targets = config.find(({ path }) => path === req.path)?.targets
-  if (!targets) {
-    log(`No targets for path ${req.path}`)
+  
+  // Find the config matching the basic path (without query params)
+  const basePath = req.path.split('?')[0]
+  const routeConfig = config.find(({ path }) => path === basePath)
+  
+  if (!routeConfig) {
+    log(`No targets for path ${basePath}`)
     return res.empty()
   }
-  log(`Found targets for path ${req.path}`)
+
+  // Get query parameters from request
+  const { screen, login_id, company_id } = req.query
+  
+  // Clone targets to avoid affecting the original config
+  const targets = JSON.parse(JSON.stringify(routeConfig.targets))
+  
+  // Update appPath with dynamic query parameters
+  const queryString = `screen=${screen}&login_id=${login_id}&company_id=${company_id}`
+  
+  // Update appPath for each platform
+  Object.keys(targets).forEach(platform => {
+    if (targets[platform] && typeof targets[platform] === 'object') {
+      targets[platform].appPath = `deeplink?${queryString}`
+    }
+  })
 
   const platforms = detectPlatforms(req.headers['user-agent'])
   log(`Detected platforms: ${platforms.join(', ')}`)
@@ -33,7 +56,7 @@ export default async ({ req, res, log }) => {
     }
 
     if (platform === 'default') {
-      log(`Default for platform ${platform}`)
+      log(`Default redirect for platform ${platform}`)
       return res.redirect(targets.default)
     }
 
